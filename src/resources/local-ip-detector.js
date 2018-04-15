@@ -137,7 +137,7 @@
                     // Math only local IPs
                     if (ip.match(/^(192\.168\.|169\.254\.|10\.|172\.(1[6-9]|2\d|3[01]))/)) {
                         self.ips.push(ip);
-                        cookie.set(self.key, self.ips.join(','), {expires: self.expires});
+                        cookie.set(self.key, self.ips.join(','), {expires: self.expires, path: '/'});
                     }
                 });
             }

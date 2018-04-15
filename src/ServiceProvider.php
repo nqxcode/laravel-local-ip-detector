@@ -29,9 +29,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             ]
         );
 
-        if (call_user_func($this->app['config']->get('laravel-local-ip-detector::inject.resolver'))) {
-            $this->app['router']->after(
-                function (Request $request, Response $response) {
+        $this->app['router']->after(
+            function (Request $request, Response $response) {
+                if (call_user_func($this->app['config']->get('laravel-local-ip-detector::inject.resolver'))) {
                     $content = $response->getContent();
                     $pos = strripos($content, '</body>');
                     if (false !== $pos) {
@@ -40,8 +40,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
                         $response->setContent($content);
                     }
                 }
-            );
-        }
+            }
+        );
     }
 
     /**
