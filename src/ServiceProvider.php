@@ -31,7 +31,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->app['router']->after(
             function (Request $request, Response $response) {
-                if (call_user_func($this->app['config']->get('laravel-local-ip-detector::inject.resolver'))) {
+                $clientIps = $this->app['config']->get('laravel-local-ip-detector::client_ips');
+                if (!is_array($clientIps)) {
+                    $clientIps = [];
+                }
+
+                if (in_array($request->getClientIp(), $clientIps)) {
                     $content = $response->getContent();
                     $pos = strripos($content, '</body>');
                     if (false !== $pos) {
