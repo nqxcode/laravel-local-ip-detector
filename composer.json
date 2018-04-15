@@ -1,6 +1,6 @@
 {
     "name": "nqxcode/laravel-local-ip-detector",
-    "description": "Local IP discovery with HTML5 WebRTC",
+    "description": "Local IP detection with HTML5 WebRTC",
     "authors": [
         {
             "name": "Andrey Pokoev",
