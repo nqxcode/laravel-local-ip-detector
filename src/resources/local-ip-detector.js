@@ -2,7 +2,7 @@
     /**
      * Local ip detector.
      *
-     * Provides functional for detecting of local ip via WebRTC and saving this ip to the "cookie".
+     * Provides functional for detecting of local ip via WebRTC and storing this ip to the "cookie".
      *
      * @returns {LocalIpDetector}
      * @constructor

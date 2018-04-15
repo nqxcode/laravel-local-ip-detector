@@ -3,7 +3,7 @@
 return [
     'inject' => [
         'resolver' => function () {
-            return true; // inject if true
+            return true; // inject scripts (with local ip detector) if true
         }
     ],
     'cookie' => [
