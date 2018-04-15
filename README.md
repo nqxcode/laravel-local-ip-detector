@@ -1,7 +1,7 @@
 Laravel 4.2 Local IP detector
 ==============
 
-Laravel 4.2 package provides fuctionality for detection of client Local IP (via HTML5 WebRTC) and storing of this address to the *cookie*.
+Laravel 4.2 package provides fuctionality for detection of client Local IP (via HTML5 WebRTC) and storing of this address to the **cookie**.
 
 ## Installation
 
@@ -30,3 +30,6 @@ Publish the config file into your project by running:
 ```bash
 php artisan config:publish nqxcode/laravel-local-ip-detector
 ```
+##
+## License
+Package licenced under the MIT license.
