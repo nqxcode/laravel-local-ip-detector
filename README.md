@@ -30,3 +30,6 @@ Publish the config file into your project by running:
 ```bash
 php artisan config:publish nqxcode/laravel-local-ip-detector
 ```
+##
+## License
+Package licenced under the MIT license.
