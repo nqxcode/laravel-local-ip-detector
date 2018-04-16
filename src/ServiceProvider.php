@@ -12,12 +12,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     protected $defer = false;
 
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
+
+    public function boot()
     {
         $this->package('nqxcode/laravel-local-ip-detector', null, __DIR__);
 
@@ -47,6 +43,16 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
                 }
             }
         );
+    }
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+
     }
 
     /**
